@@ -1,0 +1,53 @@
+{
+  "description": "Sample 1080 data records for testing",
+  "records": [
+    {
+      "record_id": "REC-001",
+      "entity_name": "Acme Corporation",
+      "entity_id": "12-3456789",
+      "entity_address": "123 Main Street",
+      "entity_city": "New York",
+      "entity_state": "NY",
+      "entity_zip": "10001",
+      "amount": 15000.00,
+      "secondary_amount": 500.00,
+      "adjustment_amount": -100.00,
+      "transaction_date": "2024-01-15",
+      "reporting_period": "2024-Q1",
+      "record_type": "standard",
+      "notes": "Quarterly payment"
+    },
+    {
+      "record_id": "REC-002",
+      "entity_name": "TechStart Inc",
+      "entity_id": "98-7654321",
+      "entity_address": "456 Oak Avenue",
+      "entity_city": "San Francisco",
+      "entity_state": "CA",
+      "entity_zip": "94102",
+      "amount": 25000.50,
+      "secondary_amount": 0.00,
+      "adjustment_amount": 0.00,
+      "transaction_date": "2024-01-20",
+      "reporting_period": "2024-Q1",
+      "record_type": "standard",
+      "notes": "Initial contract"
+    },
+    {
+      "record_id": "REC-003",
+      "entity_name": "Global Services LLC",
+      "entity_id": "55-1234567",
+      "entity_address": "789 Pine Road",
+      "entity_city": "Chicago",
+      "entity_state": "IL",
+      "entity_zip": "60601",
+      "amount": 8750.25,
+      "secondary_amount": 1250.00,
+      "adjustment_amount": -50.00,
+      "transaction_date": "2024-02-01",
+      "reporting_period": "2024-Q1",
+      "record_type": "standard",
+      "notes": "Service fee"
+    }
+  ]
+}
