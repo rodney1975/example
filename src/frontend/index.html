@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swimming Biomechanics Dashboard — 1080 Sprint Analysis</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="loading-overlay hidden">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading session data&hellip;</p>
+    </div>
+  </div>
+
+  <!-- Error Banner -->
+  <div id="error-banner" class="error-banner hidden">
+    <span id="error-message"></span>
+    <button id="error-close" class="error-close" aria-label="Close error">&times;</button>
+  </div>
+
+  <!-- Header -->
+  <header class="dashboard-header">
+    <h1>Swimming Biomechanics Dashboard &mdash; 1080 Sprint Analysis</h1>
+    <div class="session-selector">
+      <label for="session-dropdown">Session:</label>
+      <select id="session-dropdown">
+        <option value="">Select a session&hellip;</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Summary Stats Bar -->
+  <section class="summary-stats" id="summary-stats">
+    <div class="stat-card" id="stat-total-reps">
+      <span class="stat-value" id="stat-value-total-reps">&mdash;</span>
+      <span class="stat-label">Total Reps</span>
+    </div>
+    <div class="stat-card" id="stat-total-distance">
+      <span class="stat-value" id="stat-value-total-distance">&mdash;</span>
+      <span class="stat-label">Total Distance (m)</span>
+    </div>
+    <div class="stat-card" id="stat-avg-stroke-rate">
+      <span class="stat-value" id="stat-value-avg-stroke-rate">&mdash;</span>
+      <span class="stat-label">Avg Stroke Rate (spm)</span>
+    </div>
+    <div class="stat-card" id="stat-avg-stroke-length">
+      <span class="stat-value" id="stat-value-avg-stroke-length">&mdash;</span>
+      <span class="stat-label">Avg Stroke Length (m)</span>
+    </div>
+  </section>
+
+  <!-- Charts Grid -->
+  <section class="charts-grid">
+    <div class="chart-card">
+      <h2 class="chart-title">Velocity Profile</h2>
+      <div id="chart-velocity" class="chart-container"></div>
+    </div>
+    <div class="chart-card">
+      <h2 class="chart-title">Force-Velocity Relationship</h2>
+      <div id="chart-force-velocity" class="chart-container"></div>
+    </div>
+    <div class="chart-card">
+      <h2 class="chart-title">Power Output per Stroke</h2>
+      <div id="chart-power" class="chart-container"></div>
+    </div>
+    <div class="chart-card">
+      <h2 class="chart-title">Stroke Phase Breakdown</h2>
+      <div id="chart-phase" class="chart-container"></div>
+    </div>
+  </section>
+
+  <!-- Scripts: load components first, then app.js -->
+  <script src="components/dashboard.js"></script>
+  <script src="components/charts.js"></script>
+  <script src="static/app.js"></script>
+</body>
+</html>
